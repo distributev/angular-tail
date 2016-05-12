@@ -13,9 +13,9 @@ angular.module('myApp',[])
 
     $scope.$watch("[tail.watch.persistent,tail.watch.recursive,tail.watch.encoding]",function(newVal){
       if(newVal !== undefined){
-        $scope.watchOptions = $scope.tail.watch
+        $scope.watchOptions = $scope.tail.watch;
       }
-    })
+    });
 
 
   }]);

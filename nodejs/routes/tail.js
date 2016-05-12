@@ -14,7 +14,7 @@ module.exports={
   tail:function(req,res){
     var option = req.body.option;
     var file_path = req.body.filePath;
-
+console.log(file_path)
     tail = new Tail(file_path,option);
     tail.watch();
     tail.on("line", function(data) {

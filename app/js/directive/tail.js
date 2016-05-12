@@ -6,9 +6,9 @@ angular.module('myApp').directive('tail',function(){
         scope: {filePath:'=',lineSeparator: '=',fromBeginning: '=',watchOptions: '=',follow: '=?'},
         controller: ['$scope','SocketService','TailService',function($scope,SocketService,TailService){
             $scope.lineSeparator = $scope.lineSeparator?$scope.lineSeparator:"/[\r]{0,1}\n/";
-            $scope.fromBeginning = $scope.fromBeginning == undefined?false:$scope.fromBeginning;
-            $scope.watchOptions = $scope.watchOptions == undefined?{}:$scope.watchOptions;
-            $scope.follow = $scope.follow == undefined?true:$scope.follow;
+            $scope.fromBeginning = $scope.fromBeginning === undefined?false:$scope.fromBeginning;
+            $scope.watchOptions = $scope.watchOptions === undefined?{}:$scope.watchOptions;
+            $scope.follow = $scope.follow === undefined?true:$scope.follow;
 
             $scope.SocketService=SocketService;
             SocketService.connect();

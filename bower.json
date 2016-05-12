@@ -1,0 +1,24 @@
+{
+  "name": "asd",
+  "description": "asd",
+  "main": "",
+  "authors": [
+    "asd"
+  ],
+  "license": "asd",
+  "keywords": [
+    "asd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "socket.io-client": "^1.4.6"
+  }
+}
