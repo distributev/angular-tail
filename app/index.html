@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <!-- <base href="/node/index.html"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/> 
+  <title>Dashboard</title>
+  
+<!--   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="lib/angular-material/1.0.0/angular-material.min.css"/>
+  <link rel="stylesheet" href="lib/angular-bootstrap/bootstrap-material.css"/>
+  <link rel="stylesheet" href="lib/Chart/angular-chart.css"/>
+
+  <link rel="stylesheet" href="css/dashboard.css"/>
+  <link rel="stylesheet" href="css/md-table.css"/>
+ -->
+
+  <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/socket/socket.io-1.4.5.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/controller/appController.js"></script>
+  <script src="js/directive/tail.js"></script>
+  <script type="text/javascript" src="js/services/service.socket.js"></script>
+  <script type="text/javascript" src="js/services/service.tail.js"></script>
+  
+  
+
+  <!-- <script src="js/directive/directive.module.js"></script> -->
+ 
+
+</head>
+<body>
+  <div ng-controller="appController">
+      <div>File Path:</div>
+      <div>
+        <input type="text" ng-model="tail.filePath">
+      </div>
+
+      <div>Line Separator:(default by newLine)</div>
+      <div>
+          <label><input type="radio" ng-model="tail.separator" value=","/>Comma</label>
+          <label><input type="radio" ng-model="tail.separator" value="."/>Stop</label>
+          <label><input type="radio" ng-model="tail.separator" value=";">Semicolon</label>
+      </div>
+
+      <div>Watch Options:</div>
+      <div>
+        <span>persistent</span>
+        <input type="radio" ng-model="tail.watch.persistent" ng-value="true">Yes
+        <input type="radio" ng-model="tail.watch.persistent" ng-value="false">No
+      </div>
+      <div>
+        <span>recursive</span>
+        <input type="radio" ng-model="tail.watch.recursive" ng-value="true">Yes
+        <input type="radio" ng-model="tail.watch.recursive" ng-value="false">No
+      </div>
+      <div>
+        <span>encoding</span>
+        <input type="text" ng-model="tail.watch.encoding">(UTF8 as default)
+      </div>
+
+      <div>
+        <span>From Begning of the file</span>
+        <input type="radio" ng-model="tail.fromBeginning" ng-value="true">Yes
+        <input type="radio" ng-model="tail.fromBeginning" ng-value="false">No
+      </div>
+
+        <div>
+        <span>follow</span>
+        <input type="radio" ng-model="tail.follow" ng-value="true">Yes
+        <input type="radio" ng-model="tail.follow" ng-value="false">No
+      </div>
+
+
+
+<div >
+  <tail file-path="tail.filePath" line-separator="tail.separator" from-beginning="tail.fromBeginning" watch-options="watchOptions" follow="tail.follow"></tail>
+
+  </div>
+
+  </div>
+
+
+</body>
+</html>

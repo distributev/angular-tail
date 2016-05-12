@@ -1,0 +1,12 @@
+<div>
+  <button ng-click="watch()">Watch</button>
+  <button ng-click="unwatch()">Stop Watch</button>
+  <button ng-click="writeFile()">Write File</button>
+<div ng-repeat="line in SocketService.getLines() track by $index">
+
+{{line}}
+</div>
+<div>
+EOF
+</div>
+</div>
