@@ -1,13 +1,13 @@
 {
-  "name": "asd",
-  "description": "asd",
+  "name": "angular-tail",
+  "description": "angular-tail",
   "main": "",
   "authors": [
-    "asd"
+    "Mike"
   ],
-  "license": "asd",
+  "license": "",
   "keywords": [
-    "asd"
+    "angular-tail"
   ],
   "homepage": "",
   "ignore": [
